@@ -258,10 +258,13 @@
                                   };
                                   
                                 
-                                  fetch('https://script.google.com/macros/s/AKfycbyKX7M8zR4SlUWLDsIw_VhOqRFk4aV5JQaKiYp9VwAGEMCPCemUu6TXCIkL-bZ04c4c6A/exec', {
+                                  fetch('https://script.google.com/macros/s/AKfycbzUTgwrQMSKQvxthdzFCtWqgnYn12MULktYNbVnqeihbqfzTF7mdgSsNntnnBj3QddN1g/exec', {
                                     method: 'POST',
-                                    body: JSON.stringify(formData),
-                                    headers: { 'Content-Type': 'application/json' }
+                                    body: new URLSearchParams({
+                                        name: 'John',
+                                        email: 'john@example.com'
+                                      }),
+                                    headers: { 'Content-Type': 'application/x-www-form-urlencoded'}
                                   })
                                   .then(res => res.json())
                                   .then(data => {
