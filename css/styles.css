@@ -10967,6 +10967,9 @@ section.cta:before {
 .icon-feature {
   font-size: 4rem;
 }
+.icon-feature-title {
+  font-size: 2rem;
+}
 
 .features-device-mockup {
   display: flex;
